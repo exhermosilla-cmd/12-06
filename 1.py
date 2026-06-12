@@ -40,8 +40,14 @@ def ingresarproducto(lista):
     resp=validarPrecio(precio)
     if resp==False:
         print("precio debe ser un numero entre 100 y 50000")
-
-
+    
+    producto={
+        "codigo": int(codigo),
+        "nombre": nombre,
+        "precio": int(precio)
+    }
+    lista.append(producto)
+    return True
 
 def menu():
     print("== menu almacen ==")
