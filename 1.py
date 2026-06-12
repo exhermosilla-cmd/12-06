@@ -49,6 +49,8 @@ def ingresarproducto(lista):
     lista.append(producto)
     return True
 
+
+
 def menu():
     print("== menu almacen ==")
     print("1. Ingresar")
@@ -67,6 +69,11 @@ def rutas (op):
     match op:
         case 1:
             print("== Ingresar ")
+            resp=ingresarproducto(lista_productos)
+            if resp==True:
+                print("producto agregado")
+            else:
+                print("no agrego producto")
         case 2:
             print("== listar ==")
         case 3:
